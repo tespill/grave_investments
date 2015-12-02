@@ -1,16 +1,21 @@
 body{
     background-image: url("pics/grass.jpg");
-    background-size: 100%;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: left top;
     background-attachment: fixed;
 }
 
+header{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    align: center;
+}
 
 #nav{
     width: 80%;
     background-color: white;
-    text-align: center;
     margin-left: auto;
     margin-right: auto;
 }
@@ -19,33 +24,51 @@ body{
 
 }
 
-#container{
-    width: 80%;
-    background-color: cornflowerblue;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 #content{
-    width: 65%;
-    background-color: green;
+    width: 80%;
+    background-color: #D3D3D3;
     margin-right: auto;
     margin-left: auto;
+    padding-top: 1px;
+    padding-bottom: 1px;
 }
 
-ul.nav{
-    display: inline;
+#footer{
+    width: 80%;
+    background-color: #333;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    padding-top: 1px;
+    color: white;
+    padding-bottom: 1px;
+}
 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
 }
 
 li a {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 25px;
     text-decoration: none;
 }
 
-li a:hover{
+/* Change the link color to #111 (black) on hover */
+li a:hover {
     background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
 }
