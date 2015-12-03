@@ -76,3 +76,11 @@ li a:hover:not(.active) {
 .active {
     background-color: #4CAF50;
 }
+
+/* Creates circular images for shop page */
+.img-circle
+{
+    border-radius: 50%;
+    border:20px;
+    border-color:darkgrey;
+}
