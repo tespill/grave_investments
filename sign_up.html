@@ -2,9 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sign in</title>
+    <title>Sign Up</title>
     <script src="jquery-2.1.4.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="signStyles.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        .info
+        {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding-left: 10px;
+        }
+        .info p, input
+        {
+            display: inline-block;
+            vertical-align: baseline;
+            width: 180px;
+        }
+        .info p
+        {
+            margin-top: 1px;
+        }
+
+        form, input
+        {
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
+    </style>
 </head>
 
 <body>
@@ -14,7 +39,7 @@
 <div id="nav">
     <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="">Shop</a></li>
+        <li><a href="shop.html">Shop</a></li>
         <li><a href="">Schedule</a></li>
         <ul style="float:right;list-style-type:none;">
             <li><a class="active" href="sign_up.html">Sign-in</a></li>
@@ -23,17 +48,31 @@
 </div>
 
 <div id="content">
+    <h2 style="text-align: center; margin-top: 10px">Create an Account</h2>
     <form class="info">
-        <p>Username:</p> <input type="text">
-        <p>Password:</p> <input type="text">
-        <p>Date of Birth:</p> <input type="text">
-        <p>First Name:</p> <input type="text">
-        <p>Last Name:</p> <input type="text">
-        <p>Email Address:</p> <input type="text">
-        <p>Address:</p> <input type="text">
-        <p>City:</p> <input type="text">
-        <p>State:</p> <input type="text">
-        <p>Zip:</p> <input type="text">
+        <table align="center">
+            <tr>
+                <td> <p>Username: <input type="text"> </p></td>
+                <td> <p>First Name: <input type="text"> </p></td>
+                <td> <p>Email Address: <input type="text"> </p></td>
+            </tr>
+            <tr>
+                <td> <p>Password: <input type="password"> </p></td>
+                <td> <p>Last Name: <input type="text"> </p></td>
+                <td> <p>Date of Birth: <input type="text"> </p></td>
+            </tr>
+            <tr>
+                <td> <p>Repeat Password: <input type="password"> </p></td>
+                <td> <p>Address: <input type="text"> </p></td>
+                <td> <p>City: <input type="text"> </p></td>
+
+            </tr>
+            <tr>
+                <td> <p>State: <input type="text"> </p></td>
+                <td> <p>Zip: <input type="text"></p></td>
+                <td><button class="btn btn-success btn-sm">Submit</button></td>
+            </tr>
+        </table>
     </form>
 </div>
 <div id="footer">
