@@ -1,3 +1,4 @@
+/* The background of the whole page */
 body{
     background-image: url("pics/grass.jpg");
     background-size: 100% 100%;
@@ -6,6 +7,7 @@ body{
     background-attachment: fixed;
 }
 
+/* Where the logo is */
 header{
     width: 80%;
     margin-left: auto;
@@ -13,6 +15,7 @@ header{
     
 }
 
+/* Styling for the navigation bar buttons */
 #nav{
     width: 80%;
     background-color: white;
@@ -20,10 +23,12 @@ header{
     margin-right: auto;
 }
 
+
 #slider{
 
 }
 
+/* The section where the content of each page changes */
 #content{
     width: 80%;
     background-color: #D3D3D3;
@@ -33,6 +38,7 @@ header{
     padding-bottom: 1px;
 }
 
+/* Footer */
 #footer{
     width: 80%;
     background-color: #333;
@@ -44,39 +50,6 @@ header{
     padding-bottom: 1px;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
-
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 25px;
-    text-decoration: none;
-}
-
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-    background-color: #111;
-}
-
-li a:hover:not(.active) {
-    background-color: #111;
-}
-
-.active {
-    background-color: #4CAF50;
-}
-
 /* Creates circular images for shop page */
 .img-circle
 {
@@ -84,3 +57,38 @@ li a:hover:not(.active) {
     border:20px;
     border-color:darkgrey;
 }
+
+/* Styles for the navBar */
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 25px;
+        text-decoration: none;
+    }
+
+    /* Change the link color to #111 (black) on hover */
+    li a:hover {
+        background-color: #111;
+    }
+
+    li a:hover:not(.active) {
+        background-color: #111;
+    }
+
+    .active {
+        background-color: #4CAF50;
+    }
+/* End of Navigation Bar style */
