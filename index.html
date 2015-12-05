@@ -5,11 +5,23 @@
         <title>Grave Investments</title>
         <link rel="stylesheet" type="text/css" href="style.css"/>
         <script src="jquery-2.1.4.min.js"></script>
+
         <style>
             p{ padding: 5px;}
             h1{ padding: 5px;}
             table{align: center; text-align: center;}
-        </style>
+       </style>
+
+        <link rel="stylesheet" href="unslider/dist/css/unslider.css">
+        <link rel="stylesheet" href="unslider/dist/css/unslider-dots.css">
+
+        <script src="/jquery-2.1.4.min.js"></script>
+        <script src="unslider/src/js/unslider.js"></script>
+        <script>
+            jQuery(document).ready(function($) {
+                $('.my-slider').unslider();
+            });
+        </script>
     </head>
     <body>
         <!-- Top Logo -->
@@ -32,6 +44,15 @@
 
         <!-- This is where all the content that will change from page to page is added -->
         <div id="content">
+
+            <div class="my-slider">
+                <ul>
+                    <li><img alt="Tyler Cantrell" height="500px" width="500px" src="https://www.petfinder.com/wp-content/uploads/2012/11/140272627-grooming-needs-senior-cat-632x475.jpg"/></li>
+                    <li><img alt="Juan Chavez" height="500px" width="auto" src="pics/grass.jpg"/></li>
+                    <li><img alt="Aiden Navarro" height="500px" width="800px" src="pics/logo.png"/></li>
+                </ul>
+            </div>
+
             <p>Here at Grave Investments, our family of staff is here to help make this difficult time as painless as possible. Allow our team of caring individuals to guide you through this process.</p>
             <p>We've made it simple to plan a funeral service or wake, order a casket, create a custom tombstone, order flowers, to make this occasion honorable. </p>
             <h1>Our Family</h1>
@@ -51,7 +72,6 @@
                     </tr>
                 </table>
             </div>
-
         </div>
         <!-- End of content-->
 
@@ -61,3 +81,5 @@
         <script src="script.js"></script>
     </body>
 </html>
+
+<!--http://unslider.com/-->
