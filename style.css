@@ -51,12 +51,12 @@ header{
 }
 
 /* Creates circular images for shop page */
-.img-circle
-{
+.img-circle {
     border-radius: 50%;
-    border:20px;
-    border-color:darkgrey;
+    border: 20px;
+    border-color: darkgrey;
 }
+
 
 /* Styles for the navBar */
     ul {
