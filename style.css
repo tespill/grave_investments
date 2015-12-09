@@ -21,11 +21,7 @@ header{
     background-color: white;
     margin-left: auto;
     margin-right: auto;
-}
-
-
-#slider{
-
+    min-width: 850px;
 }
 
 /* The section where the content of each page changes */
@@ -36,6 +32,7 @@ header{
     margin-left: auto;
     padding-top: 1px;
     padding-bottom: 1px;
+    min-width: 850px;
 }
 
 /* Footer */
@@ -48,6 +45,7 @@ header{
     padding-top: 1px;
     color: white;
     padding-bottom: 1px;
+    min-width: 850px;
 }
 
 /* Creates circular images for shop page */
@@ -92,3 +90,50 @@ header{
         background-color: #4CAF50;
     }
 /* End of Navigation Bar style */
+<<<<<<< HEAD
+=======
+
+/* Slider Style */
+    .rslides {
+        position: relative;
+        list-style: none;
+        overflow: hidden;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .rslides li {
+        -webkit-backface-visibility: hidden;
+        position: absolute;
+        display: none;
+        width: 100%;
+        left: 0;
+        top: 0;
+    }
+
+    .rslides li:first-child {
+        position: relative;
+        display: block;
+        float: left;
+    }
+
+    .rslides img {
+        display: block;
+        height: auto;
+        float: left;
+        width: 100%;
+        border: 0;
+    }
+
+    #slider{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 25px;
+        max-height: 450px;
+        height: auto;
+        overflow: hidden;
+    }
+/* END OF SLIDER STYLE */
+>>>>>>> 5c49973a5e591d4b62bdd581ef6a612e6dcf532c

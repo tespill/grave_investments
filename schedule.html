@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Grave Investments</title>
+        <script src="jquery-2.1.4.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+    <header>
+        <img alt="Grave Investments" src="pics/logo.png">
+    </header>
+    <div id="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a class="active" href="">Schedule</a></li>
+            <ul style="float:right;list-style-type:none;">
+                <li><a href="sign_up.html">Sign-in</a></li>
+            </ul>
+        </ul>
+    </div>
+    <div id="content">
+        <br>
+        <center>
+            <form>
+                Date and time of funeral:
+                <input type="date" name="funeral">&nbsp
+                <input type="time" name="timeOf">
+            </form>
+            <br>
+            <form action="action_page.php">
+                First name:<br>
+                <input type="text" name="firstname">
+                <br>
+                Last name:<br>
+                <input type="text" name="lastname">
+                <br>
+            </form><br>
+            <form action="">
+                <input type="radio" name="sex" value="male">Male
+                &nbsp &nbsp &nbsp
+                <input type="radio" name="sex" value="female">Female
+                &nbsp &nbsp
+                <input type="radio" name="sex" value="male">other
+            </form>
+            <input type="submit" value="Submit">
+        </center>
+        <br>
+    </div>
+    <div id="footer">
+        <p>Tyler Cantrell, Juan Chavez, Aiden Navarro, Taylor Spiller [2015]</p>
+    </div>
+    </body>
+</html>
