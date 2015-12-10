@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>Grave Investments</title>
         <script src="jquery-2.1.4.min.js"></script>
+<<<<<<< HEAD
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
@@ -53,5 +54,65 @@
         <div id="footer">
             <p>Tyler Cantrell, Juan Chavez, Aiden Navarro, Taylor Spiller [2015]</p>   
         </div>ı
+=======
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <link rel="stylesheet" type="text/css" href="css/navbar.css"/>
+    </head>
+    <body>
+    <header>
+        <img alt="Grave Investments" src="pics/logo.png">
+    </header>
+
+    <!-- NEW NAVIGATION BAR
+        http://cssmenumaker.com/menu/animated-responsive-drop-down-menu
+        -->
+    <div style="z-index: 10" id='cssmenu'>
+        <ul>
+            <li><a href='index.html'><span>Home</span></a></li>
+            <li><a href='#'><span>Shop</span></a>
+                <ul>
+                    <li class='has-sub'><a href='caskets.html'><span>Caskets</span></a></li>
+                    <li class='has-sub'><a href='urns.html'><span>Urns</span></a></li>
+                    <li class='has-sub'><a href='flower.html'><span>Flowers</span></a></li>
+                </ul>
+            </li>
+            <li class='active'><a href='schedule.html'><span>Schedule</span></a></li>
+            <li class='last'><a href="sign_up.html"><span>Sign In</span></a></li>
+        </ul>
+    </div>
+    <!-- END OF NAVIGATION BAR -->
+
+    <div id="content">
+        <br>
+        <center>
+            <form>
+                Date and time of funeral:
+                <input type="date" name="funeral">&nbsp
+                <input type="time" name="timeOf">
+            </form>
+            <br>
+            <form action="action_page.php">
+                First name:<br>
+                <input type="text" name="firstname">
+                <br>
+                Last name:<br>
+                <input type="text" name="lastname">
+                <br>
+            </form><br>
+            <form action="">
+                <input type="radio" name="sex" value="male">Male
+                &nbsp &nbsp &nbsp
+                <input type="radio" name="sex" value="female">Female
+                &nbsp &nbsp
+                <input type="radio" name="sex" value="male">other
+            </form>
+            <input type="submit" value="Submit">
+        </center>
+        <br>
+    </div>
+    <div id="footer">
+        <p>Tyler Cantrell, Juan Chavez, Aiden Navarro, Taylor Spiller [2015]</p>
+    </div>
+>>>>>>> 062dd904669b1609a4f94118495d68c7f36e9251
     </body>
 </html>
