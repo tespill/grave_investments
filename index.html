@@ -28,9 +28,15 @@
             });
         </script>
 
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+
         <!-- Scripts for slider -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script src="js/responsiveslides.min.js"></script>
+
+        <!-- Files for menu bar -->
+        <script src="js/navbar.js" type="text/javascript"></script>
+        <link rel="stylesheet" type="text/css" href="css/navbar.css"/>
 
         <style>
             td{
@@ -50,8 +56,10 @@
             <img alt="Grave Investments" src="pics/logo.png">
         </header>
 
-        <!-- Navigation Bar -->
-        <div id="nav">
+        <!-- NEW NAVIGATION BAR
+        http://cssmenumaker.com/menu/animated-responsive-drop-down-menu
+        -->
+        <div style="z-index: 10" id='cssmenu'>
             <ul>
                 <li><a class="active" href="index.html">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
@@ -59,9 +67,21 @@
                 <ul style="float:right;list-style-type:none;">
                     <li><a href="sign_in.html">Sign-in</a></li>
                 </ul>
+
+                <li><a href='index.html'><span>Home</span></a></li>
+                <li class='active has-sub'><a href='#'><span>Shop</span></a>
+                    <ul>
+                        <li class='has-sub'><a href='caskets.html'><span>Caskets</span></a></li>
+                        <li class='has-sub'><a href='urns.html'><span>Urns</span></a></li>
+                        <li class='has-sub'><a href='flower.html'><span>Flowers</span></a></li>
+                    </ul>
+                </li>
+                <li><a href='schedule.html'><span>Schedule</span></a></li>
+                <li class='last'><a href="sign_up.html"><span>Sign In</span></a></li>
+
             </ul>
         </div>
-        <!-- End of Navigation Bar -->
+        <!-- END OF NAVIGATION BAR -->
 
         <!-- This is where all the content that will change from page to page is added -->
         <div id="content">
@@ -112,4 +132,3 @@
         </script>
     </body>
 </html>
-<!--http://unslider.com/-->

@@ -1,7 +1,7 @@
 /* The background of the whole page */
 body{
-    background-image: url("pics/grass.jpg");
     background-size: 100% 100%;
+    background-image: url("http://www.myfreetextures.com/wp-content/uploads/2015/01/lots-of-grass-background.jpg");
     background-repeat: no-repeat;
     background-position: left top;
     background-attachment: fixed;
@@ -13,15 +13,6 @@ header{
     margin-left: auto;
     margin-right: auto;
     
-}
-
-/* Styling for the navigation bar buttons */
-#nav{
-    width: 80%;
-    background-color: white;
-    margin-left: auto;
-    margin-right: auto;
-    min-width: 850px;
 }
 
 /* The section where the content of each page changes */
