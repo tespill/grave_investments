@@ -1,109 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Grave Investments</title>
+        <script src="jquery-2.1.4.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <link rel="stylesheet" type="text/css" href="css/navbar.css"/>
+    </head>
+    <body>
+        <header>
+            <img alt="Grave Investments" src="pics/logo.png"/>
+        </header>
 
-<head>
-    <meta charset="UTF-8">
-    <title>Grave Investments</title>
-    <script src="jquery-2.1.4.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
-    <link rel="stylesheet" type="text/css" href="css/navbar.css"/>
-</head>
-<body>
-<header>
-    <img alt="Grave Investments" src="pics/logo.png"/>
-</header>
-
-<!-- NEW NAVIGATION BAR
-        http://cssmenumaker.com/menu/animated-responsive-drop-down-menu
-        -->
-<div style="z-index: 10" id='cssmenu'>
-    <ul>
-        <li><a href='index.html'><span>Home</span></a></li>
-        <li><a class="active has-sub" href='#'><span>Shop</span></a>
+        <!-- NEW NAVIGATION BAR
+                http://cssmenumaker.com/menu/animated-responsive-drop-down-menu
+                -->
+        <div style="z-index: 10" id='cssmenu'>
             <ul>
-                <li class='has-sub'><a href='caskets.html'><span>Caskets</span></a></li>
-                <li class='has-sub'><a href='urns.html'><span>Urns</span></a></li>
-                <li class='has-sub'><a href='flower.html'><span>Flowers</span></a></li>
+                <li><a href='index.html'><span>Home</span></a></li>
+                <li><a class="active has-sub" href='#'><span>Shop</span></a>
+                    <ul>
+                        <li class='has-sub'><a href='caskets.html'><span>Caskets</span></a></li>
+                        <li class='has-sub'><a href='urns.html'><span>Urns</span></a></li>
+                        <li class='has-sub'><a href='flower.html'><span>Flowers</span></a></li>
+                    </ul>
+                </li>
+                <li><a href='schedule.html'><span>Schedule</span></a></li>
+                <li class='last'><a href="sign_in.html"><span>Sign In</span></a></li>
             </ul>
-        </li>
-        <li><a href='schedule.html'><span>Schedule</span></a></li>
-        <li class='last'><a href="sign_in.html"><span>Sign In</span></a></li>
-    </ul>
-</div>
-<!-- END OF NAVIGATION BAR -->
+        </div>
+        <!-- END OF NAVIGATION BAR -->
 
-<div id="content">
-    <nav>
-        <center><h1>Urn Shop</h1></center>
-        <table border="0px" align="center" >
+        <!-- START OF CONTENT -->
+        <div id="content">
+            <nav>
+                <center><h1>Urn Shop</h1></center>
+                <table border="0px" align="center" >
 
-            <tr>
-                <th>
-                    <img class="pic11, img-circle" src="pics/1.png" width="200px" height="200px">
-                    <p id="1">Beautiful black and gold solid brass cremation urn with intricately hand engraved decorative band</p>
-                    <a href="http://www.eleganturns.com/fotwcrurn.html"> <button>Info</button></a>
-                </th>
-                <th>
-                    <img class="pic21, img-circle" src="pics/2.png" width="200px" height="200px">
-                    <p id="2">Stunning brass urn with a beautiful pearl white enamel and nickel finish intricately hand engraved border.</p>
-                    <a href="http://www.eleganturns.com/pewhma.html"> <button>Info</button></a>
-                </th>
-                <th>
-                    <img class="pic31, img-circle" src="pics/3.png" width="200px" height="200px">
-                    <p id="3">Adult size solid brass urn in a gorgeous blue finish.</p>
-                    <a href="http://www.eleganturns.com/gorgeousblue.html"> <button>Info</button></a>
-                </th>
-            </tr>
+                    <tr>
+                        <th>
+                            <img class="pic11, img-circle" src="pics/1.png" width="200px" height="200px">
+                            <p id="1">Beautiful black and gold solid brass cremation urn with intricately hand engraved decorative band</p>
+                            <a href="http://www.eleganturns.com/fotwcrurn.html"> <button>Info</button></a>
+                        </th>
+                        <th>
+                            <img class="pic21, img-circle" src="pics/2.png" width="200px" height="200px">
+                            <p id="2">Stunning brass urn with a beautiful pearl white enamel and nickel finish intricately hand engraved border.</p>
+                            <a href="http://www.eleganturns.com/pewhma.html"> <button>Info</button></a>
+                        </th>
+                        <th>
+                            <img class="pic31, img-circle" src="pics/3.png" width="200px" height="200px">
+                            <p id="3">Adult size solid brass urn in a gorgeous blue finish.</p>
+                            <a href="http://www.eleganturns.com/gorgeousblue.html"> <button>Info</button></a>
+                        </th>
+                    </tr>
 
-            <tr>
-                <th>
-                    <img class="pic41, img-circle" src="pics/4.png" width="200px" height="200px">
-                    <p id="4">Solid brass, nickel plated with pearl white enamel and hand engraved border.</p>
-                    <a href="http://www.eleganturns.com/aphrodite.html"> <button>Info</button></a>
-                </th>
-                <th>
-                    <img class="pic51, img-circle" src="pics/5.png" width="200px" height="200px">
-                    <p id="5">Solid brass, adult size cremation urn with beautiful pearl pink and nickel finish.</p>
-                    <a href="http://www.eleganturns.com/adbrmoofpecr.html"> <button>Info</button></a>
-                </th>
-                <th>
-                    <img class="pic61, img-circle" src="pics/6.png" width="200px" height="200px">
-                    <p id="6">Solid brass urn beautifully engraved all over in a two-tone finish.</p>
-                    <a href="http://www.eleganturns.com/goinghome1.html"> <button>Info</button></a>
-                </th>
-            </tr>
+                    <tr>
+                        <th>
+                            <img class="pic41, img-circle" src="pics/4.png" width="200px" height="200px">
+                            <p id="4">Solid brass, nickel plated with pearl white enamel and hand engraved border.</p>
+                            <a href="http://www.eleganturns.com/aphrodite.html"> <button>Info</button></a>
+                        </th>
+                        <th>
+                            <img class="pic51, img-circle" src="pics/5.png" width="200px" height="200px">
+                            <p id="5">Solid brass, adult size cremation urn with beautiful pearl pink and nickel finish.</p>
+                            <a href="http://www.eleganturns.com/adbrmoofpecr.html"> <button>Info</button></a>
+                        </th>
+                        <th>
+                            <img class="pic61, img-circle" src="pics/6.png" width="200px" height="200px">
+                            <p id="6">Solid brass urn beautifully engraved all over in a two-tone finish.</p>
+                            <a href="http://www.eleganturns.com/goinghome1.html"> <button>Info</button></a>
+                        </th>
+                    </tr>
 
-            <tr>
-                <th>
-                    <img class="pic71, img-circle" src="pics/7.png" width="200px" height="200px">
-                    <p id="7">A beautiful two tone solid brass urn with silver engraved doves.</p>
-                    <a href="http://www.eleganturns.com/ruby.html"> <button>Info</button></a>
-                </th>
-                <th>
-                    <img class="pic81, img-circle" src="pics/8.png" width="200px" height="200px">
-                    <p id="8">A beautiful pearl white enameled solid brass urn with nickel embossed flowers.</p>
-                    <a href="http://www.eleganturns.com/blackbeauty.html"> <button>Info</button></a>
-                </th>
-                <th>
-                    <img class="pic91, img-circle" src="pics/9.png" width="200px" height="200px">
-                    <p id="9">Solid Brass burgundy finish Urn w/Engraved Border.</p>
-                    <a href="http://www.eleganturns.com/clbren.html"> <button>Info</button></a>
-                </th>
-            </tr>
+                    <tr>
+                        <th>
+                            <img class="pic71, img-circle" src="pics/7.png" width="200px" height="200px">
+                            <p id="7">A beautiful two tone solid brass urn with silver engraved doves.</p>
+                            <a href="http://www.eleganturns.com/ruby.html"> <button>Info</button></a>
+                        </th>
+                        <th>
+                            <img class="pic81, img-circle" src="pics/8.png" width="200px" height="200px">
+                            <p id="8">A beautiful pearl white enameled solid brass urn with nickel embossed flowers.</p>
+                            <a href="http://www.eleganturns.com/blackbeauty.html"> <button>Info</button></a>
+                        </th>
+                        <th>
+                            <img class="pic91, img-circle" src="pics/9.png" width="200px" height="200px">
+                            <p id="9">Solid Brass burgundy finish Urn w/Engraved Border.</p>
+                            <a href="http://www.eleganturns.com/clbren.html"> <button>Info</button></a>
+                        </th>
+                    </tr>
 
-        </table>
-    </nav>
-</div>
-<div id="footer">
-    <p>Tyler Cantrell, Juan Chavez, Aiden Navarro, Taylor Spiller [2015]</p>
-</div>
-</body>
-
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
-
-</body>
+                </table>
+            </nav>
+        </div>
+        <!-- END OF CONTENT -->
+        <div id="footer">
+            <p>Tyler Cantrell, Juan Chavez, Aiden Navarro, Taylor Spiller [2015]</p>
+        </div>
+    </body>
 </html>

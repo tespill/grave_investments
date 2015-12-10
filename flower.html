@@ -1,115 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Grave Investments</title>
+        <script src="jquery-2.1.4.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <link rel="stylesheet" type="text/css" href="css/navbar.css"/>
+        <style>
+            td{
+                padding: 1000000px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <img alt="Grave Investments" src="pics/logo.png">
+        </header>
 
-<head>
-    <meta charset="UTF-8">
-    <title>Grave Investments</title>
-    <script src="jquery-2.1.4.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
-    <link rel="stylesheet" type="text/css" href="css/navbar.css"/>
-    <style>
-        td{
-            padding: 1000000px;
-        }
-    </style>
-</head>
-<body>
-<header>
-    <img alt="Grave Investments" src="pics/logo.png">
-</header>
-
-<!-- NEW NAVIGATION BAR
-        http://cssmenumaker.com/menu/animated-responsive-drop-down-menu
-        -->
-<div style="z-index: 10" id='cssmenu'>
-    <ul>
-        <li><a href='index.html'><span>Home</span></a></li>
-        <li class="active has-sub"><a href='#'><span>Shop</span></a>
+        <!-- NEW NAVIGATION BAR
+                http://cssmenumaker.com/menu/animated-responsive-drop-down-menu
+                -->
+        <div style="z-index: 10" id='cssmenu'>
             <ul>
-                <li class='has-sub'><a href='caskets.html'><span>Caskets</span></a></li>
-                <li class='has-sub'><a href='urns.html'><span>Urns</span></a></li>
-                <li class='has-sub'><a href='flower.html'><span>Flowers</span></a></li>
+                <li><a href='index.html'><span>Home</span></a></li>
+                <li class="active has-sub"><a href='#'><span>Shop</span></a>
+                    <ul>
+                        <li class='has-sub'><a href='caskets.html'><span>Caskets</span></a></li>
+                        <li class='has-sub'><a href='urns.html'><span>Urns</span></a></li>
+                        <li class='has-sub'><a href='flower.html'><span>Flowers</span></a></li>
+                    </ul>
+                </li>
+                <li><a href='schedule.html'><span>Schedule</span></a></li>
+                <li class='last'><a href="sign_in.html"><span>Sign In</span></a></li>
             </ul>
-        </li>
-        <li><a href='schedule.html'><span>Schedule</span></a></li>
-        <li class='last'><a href="sign_in.html"><span>Sign In</span></a></li>
-    </ul>
-</div>
-<!-- END OF NAVIGATION BAR -->
+        </div>
+        <!-- END OF NAVIGATION BAR -->
 
-<div id="content">
-    <nav>
-        <center><h1>Flower Shop</h1></center>
-        <table border="0px" align="center">
+        <!-- START OF CONTENT -->
+        <div id="content">
+            <center><h1>Flower Shop</h1></center>
+            <table border="0px" align="center">
 
-            <tr>
-                <th>
-                    <img class="pic11, img-circle" src="http://fyf.tac-cdn.net/images/products/large/BN1024G.jpg" width="200px" height="200px">
-                    <p id="1">Pink snapdragons and alstroemeria.</p>
-                    <a href="http://www.fromyouflowers.com/products/green__pink_arrangement.htm"> <button>Info</button></a>
-                </th>
-                <th>
-                    <img class="pic21, img-circle" src="http://fyf.tac-cdn.net/images/products/large/BF190-11K.jpg" width="200px" height="200px">
-                    <p id="2">White floral sympathy standing spray.</p>
-                    <a href="http://www.fromyouflowers.com/products/white_standing_spray.htm"> <button>Info</button></a>
-                </th>
-                <th>
-                    <img class="pic31, img-circle" src="http://fyf.tac-cdn.net/images/products/large/FTD-C12-4400.jpg" width="200px" height="200px">
-                    <p id="3">This bountiful basket bouquet.</p>
-                    <a href="http://www.fromyouflowers.com/products/the_ftd_wondrous_nature_bouquet_2.htm"> <button>Info</button></a>
-                </th>
-            </tr>
+                <tr>
+                    <th>
+                        <img class="pic11, img-circle" src="http://fyf.tac-cdn.net/images/products/large/BN1024G.jpg" width="200px" height="200px">
+                        <p id="1">Pink snapdragons and alstroemeria.</p>
+                        <a href="http://www.fromyouflowers.com/products/green__pink_arrangement.htm"> <button>Info</button></a>
+                    </th>
+                    <th>
+                        <img class="pic21, img-circle" src="http://fyf.tac-cdn.net/images/products/large/BF190-11K.jpg" width="200px" height="200px">
+                        <p id="2">White floral sympathy standing spray.</p>
+                        <a href="http://www.fromyouflowers.com/products/white_standing_spray.htm"> <button>Info</button></a>
+                    </th>
+                    <th>
+                        <img class="pic31, img-circle" src="http://fyf.tac-cdn.net/images/products/large/FTD-C12-4400.jpg" width="200px" height="200px">
+                        <p id="3">This bountiful basket bouquet.</p>
+                        <a href="http://www.fromyouflowers.com/products/the_ftd_wondrous_nature_bouquet_2.htm"> <button>Info</button></a>
+                    </th>
+                </tr>
 
-            <tr>
-                <th>
-                    <img class="pic41, img-circle" src="http://fyf.tac-cdn.net/images/products/large/BF329-11K.jpg" width="200px" height="200px">
-                    <p id="4">White roses, and white Monte Casinos.</p>
-                    <a href="http://www.fromyouflowers.com/products/white_tribute_arrangement.htm"> <button>Info</button></a>
-                </th>
-                <th>
-                    <img class="pic51, img-circle" src="http://fyf.tac-cdn.net/images/products/large/BN1890.jpg" width="200px" height="200px">
-                    <p id="5">Varieties of fresh green plants.</p>
-                    <a href="http://www.fromyouflowers.com/products/classic_dish_garden.htm"> <button>Info</button></a>
-                </th>
-                <th>
-                    <img class="pic61, img-circle" src="http://fyf.tac-cdn.net/images/products/large/BN1032G.jpg" width="200px" height="200px">
-                    <p id="6">Red gladiolus, yellow alstroemeria and more.</p>
-                    <a href="http://www.fromyouflowers.com/products/memorable_arrangement.htm"> <button>Info</button></a>
-                </th>
-            </tr>
+                <tr>
+                    <th>
+                        <img class="pic41, img-circle" src="http://fyf.tac-cdn.net/images/products/large/BF329-11K.jpg" width="200px" height="200px">
+                        <p id="4">White roses, and white Monte Casinos.</p>
+                        <a href="http://www.fromyouflowers.com/products/white_tribute_arrangement.htm"> <button>Info</button></a>
+                    </th>
+                    <th>
+                        <img class="pic51, img-circle" src="http://fyf.tac-cdn.net/images/products/large/BN1890.jpg" width="200px" height="200px">
+                        <p id="5">Varieties of fresh green plants.</p>
+                        <a href="http://www.fromyouflowers.com/products/classic_dish_garden.htm"> <button>Info</button></a>
+                    </th>
+                    <th>
+                        <img class="pic61, img-circle" src="http://fyf.tac-cdn.net/images/products/large/BN1032G.jpg" width="200px" height="200px">
+                        <p id="6">Red gladiolus, yellow alstroemeria and more.</p>
+                        <a href="http://www.fromyouflowers.com/products/memorable_arrangement.htm"> <button>Info</button></a>
+                    </th>
+                </tr>
 
-            <tr>
-                <th>
-                    <img class="pic71, img-circle" src="http://fyf.tac-cdn.net/images/products/large/BF188-11K.jpg" width="200px" height="200px">
-                    <p id="7">Yellow snapdragons, mums and solidago.</p>
-                    <a href="http://www.fromyouflowers.com/products/classic_yellow_mache_bouquet.htm"> <button>Info</button></a>
-                </th>
-                <th>
-                    <img class="pic81, img-circle" src="http://fyf.tac-cdn.net/images/products/large/BF212-11KM.jpg" width="200px" height="200px">
-                    <p id="8">Mix of roses, stargazer lilies, waxflower and daisies.</p>
-                    <a href="http://www.fromyouflowers.com/products/thinking_of_you_basket.htm"> <button>Info</button></a>
-                </th>
-                <th>
-                    <img class="pic91, img-circle" src="http://fyf.tac-cdn.net/images/products/large/T12Z102A.jpg" width="200px" height="200px">
-                    <p id="9">Soft spray of pink and white blooms.</p>
-                    <a href="http://www.fromyouflowers.com/products/gentle_thoughts_spray.htm"> <button>Info</button></a>
-                </th>
-            </tr>
+                <tr>
+                    <th>
+                        <img class="pic71, img-circle" src="http://fyf.tac-cdn.net/images/products/large/BF188-11K.jpg" width="200px" height="200px">
+                        <p id="7">Yellow snapdragons, mums and solidago.</p>
+                        <a href="http://www.fromyouflowers.com/products/classic_yellow_mache_bouquet.htm"> <button>Info</button></a>
+                    </th>
+                    <th>
+                        <img class="pic81, img-circle" src="http://fyf.tac-cdn.net/images/products/large/BF212-11KM.jpg" width="200px" height="200px">
+                        <p id="8">Mix of roses, stargazer lilies, waxflower and daisies.</p>
+                        <a href="http://www.fromyouflowers.com/products/thinking_of_you_basket.htm"> <button>Info</button></a>
+                    </th>
+                    <th>
+                        <img class="pic91, img-circle" src="http://fyf.tac-cdn.net/images/products/large/T12Z102A.jpg" width="200px" height="200px">
+                        <p id="9">Soft spray of pink and white blooms.</p>
+                        <a href="http://www.fromyouflowers.com/products/gentle_thoughts_spray.htm"> <button>Info</button></a>
+                    </th>
+                </tr>
 
-        </table>
-        <br/>
-    </nav>
-</div>
-<div id="footer">
-    <p>Tyler Cantrell, Juan Chavez, Aiden Navarro, Taylor Spiller [2015]</p>
-</div>
-</body>
-
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
-
-</body>
+            </table>
+            <br/>
+        </div>
+        <!-- END OF CONTENT -->
+        <div id="footer">
+            <p>Tyler Cantrell, Juan Chavez, Aiden Navarro, Taylor Spiller [2015]</p>
+        </div>
+    </body>
 </html>
