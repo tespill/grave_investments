@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <title>Sign In</title>
     <script src="jquery-2.1.4.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- Files for menu bar -->
+    <script src="js/navbar.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="css/navbar.css"/>
+
     <style>
         .info
         {
@@ -38,16 +44,25 @@
 <header>
     <img alt="Grave Investments" src="pics/logo.png">
 </header>
-<div id="nav">
+
+<!-- NEW NAVIGATION BAR
+      http://cssmenumaker.com/menu/animated-responsive-drop-down-menu
+      -->
+<div style="z-index: 10" id='cssmenu'>
     <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="">Schedule</a></li>
-        <ul style="float:right;list-style-type:none;">
-            <li><a class="active" href="sign_in.html">Sign-in</a></li>
-        </ul>
+        <li><a href='index.html'><span>Home</span></a></li>
+        <li class='has-sub'><a href='#'><span>Shop</span></a>
+            <ul>
+                <li class='has-sub'><a href='caskets.html'><span>Caskets</span></a></li>
+                <li class='has-sub'><a href='urns.html'><span>Urns</span></a></li>
+                <li class='has-sub'><a href='flower.html'><span>Flowers</span></a></li>
+            </ul>
+        </li>
+        <li><a href='schedule.html'><span>Schedule</span></a></li>
+        <li class='last active'><a href="sign_in.html"><span>Sign In</span></a></li>
     </ul>
 </div>
+<!-- END OF NAVIGATION BAR -->
 
 <div id="content">
     <h2 style="text-align: center; margin-top: 10px">Welcome Back!</h2>
