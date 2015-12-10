@@ -1,16 +1,19 @@
-<!DOCTYPE html>
+<!DOCTYpE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sign Up</title>
+    <title>Sign In</title>
     <script src="jquery-2.1.4.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- Files for menu bar -->
+    <script src="js/navbar.js" type="text/javascript"></script>
     <link rel="stylesheet" type="text/css" href="css/navbar.css"/>
+
     <style>
         .info
         {
-            margin-top: 20px;
-            margin-bottom: 20px;
             padding-left: 10px;
         }
         .info p, input
@@ -30,6 +33,10 @@
             -moz-box-sizing: border-box;
             -webkit-box-sizing: border-box;
         }
+        .buttons
+        {
+            margin-bottom: 15px;
+        }
     </style>
 </head>
 
@@ -39,12 +46,12 @@
 </header>
 
 <!-- NEW NAVIGATION BAR
-        http://cssmenumaker.com/menu/animated-responsive-drop-down-menu
-        -->
+      http://cssmenumaker.com/menu/animated-responsive-drop-down-menu
+      -->
 <div style="z-index: 10" id='cssmenu'>
     <ul>
         <li><a href='index.html'><span>Home</span></a></li>
-        <li><a href='#'><span>Shop</span></a>
+        <li class='has-sub'><a href='#'><span>Shop</span></a>
             <ul>
                 <li class='has-sub'><a href='caskets.html'><span>Caskets</span></a></li>
                 <li class='has-sub'><a href='urns.html'><span>Urns</span></a></li>
@@ -58,32 +65,22 @@
 <!-- END OF NAVIGATION BAR -->
 
 <div id="content">
-    <h2 style="text-align: center; margin-top: 10px">Create an Account</h2>
+    <h2 style="text-align: center; margin-top: 10px">Welcome Back!</h2>
     <form class="info">
         <table align="center">
             <tr>
-                <td> <p>Username: <input type="text"> </p></td>
-                <td> <p>First Name: <input type="text"> </p></td>
-                <td> <p>Email Address: <input type="text"> </p></td>
+                <td> <p>Username <input type="text"> </p></td>
             </tr>
             <tr>
-                <td> <p>Password: <input type="password"> </p></td>
-                <td> <p>Last Name: <input type="text"> </p></td>
-                <td> <p>Date of Birth: <input type="text" placeholder="mm/dd/yyyy"> </p></td>
-            </tr>
-            <tr>
-                <td> <p>Repeat Password: <input type="password"> </p></td>
-                <td> <p>Address: <input type="text"> </p></td>
-                <td> <p>City: <input type="text"> </p></td>
-
-            </tr>
-            <tr>
-                <td> <p>State: <input type="text"> </p></td>
-                <td> <p>Zip: <input type="text"></p></td>
-                <td><button class="btn btn-success btn-sm">Submit</button></td>
+                <td> <p>Password <input type="password"> </p></td>
             </tr>
         </table>
     </form>
+    <table align="center" class="buttons">
+        <tr>
+            <td><button>Sign In</button> <a href="sign_up.html"><button>Create an Account</button></a></td>
+        </tr>
+    </table>
 </div>
 <div id="footer">
     <p>Tyler Cantrell, Juan Chavez, Aiden Navarro, Taylor Spiller [2015]</p>
