@@ -1,9 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700);
+/* Code from http://cssmenumaker.com/menu/animated-responsive-drop-down-menu */
 #cssmenu {
   background: #333;
   margin: 0;
   width: 80%;
-  min-width: 850px;
   padding: 0;
   line-height: 1;
   display: block;
@@ -239,8 +239,6 @@
   width: 170px;
   display: block;
 }
-
-/* Makes it mobile friendly but messes up normal site right now
 @media all and (max-width: 800px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min-resolution: 192dpi) and (max-width: 1024px), only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
   #cssmenu > ul {
     max-height: 0;
@@ -367,4 +365,3 @@
     top: 26px;
   }
 }
-*/
