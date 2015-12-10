@@ -10,7 +10,7 @@
 
         <!-- Files for menu bar -->
         <script src="js/navbar.js" type="text/javascript"></script>
-
+        <link rel="stylesheet" type="text/css" href="css/navbar.css"/>
 
         <style>
             td{
@@ -29,41 +29,21 @@
             <img alt="Grave Investments" src="pics/logo.png">
         </header>
 
-        <!-- Navigation Bar OLD
-        <div id="nav">
+        <!-- NEW NAVIGATION BAR
+        http://cssmenumaker.com/menu/animated-responsive-drop-down-menu
+        -->
+        <div style="z-index: 10" id='cssmenu'>
             <ul>
-                <li><a class="active" href="index.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="schedule.html">Schedule</a></li>
-                <ul style="float:right;list-style-type:none;">
-                    <li><a href="sign_up.html">Sign-in</a></li>
-                </ul>
-            </ul>
-        </div>
-        End of Navigation Bar -->
-
-        <!-- NEW NAVIGATION BAR -->
-        <div id='cssmenu'>
-            <ul>
-                <li><a href='#'><span>Home</span></a></li>
-                <li class='active has-sub'><a href='#'><span>Products</span></a>
+                <li><a href='index.html'><span>Home</span></a></li>
+                <li class='active has-sub'><a href='#'><span>Shop</span></a>
                     <ul>
-                        <li class='has-sub'><a href='#'><span>Product 1</span></a>
-                            <ul>
-                                <li><a href='#'><span>Sub Product</span></a></li>
-                                <li class='last'><a href='#'><span>Sub Product</span></a></li>
-                            </ul>
-                        </li>
-                        <li class='has-sub'><a href='#'><span>Product 2</span></a>
-                            <ul>
-                                <li><a href='#'><span>Sub Product</span></a></li>
-                                <li class='last'><a href='#'><span>Sub Product</span></a></li>
-                            </ul>
-                        </li>
+                        <li class='has-sub'><a href='caskets.html'><span>Caskets</span></a></li>
+                        <li class='has-sub'><a href='urns.html'><span>Urns</span></a></li>
+                        <li class='has-sub'><a href='flower.html'><span>Flowers</span></a></li>
                     </ul>
                 </li>
-                <li><a href='#'><span>About</span></a></li>
-                <li class='last'><a href='#'><span>Contact</span></a></li>
+                <li><a href='schedule.html'><span>Schedule</span></a></li>
+                <li class='last'><a href="sign_up.html"><span>Sign In</span></a></li>
             </ul>
         </div>
         <!-- END OF NAVIGATION BAR -->
