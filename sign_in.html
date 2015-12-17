@@ -1,0 +1,90 @@
+<!DOCTYpE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign In</title>
+    <script src="jquery-2.1.4.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/navbar.css"/>
+    <link rel="shortcut icon" type="image/x-icon" href="pics/favico.ico" />
+
+    <style>
+        .info
+        {
+            padding-left: 10px;
+        }
+        .info p, input
+        {
+            display: inline-block;
+            vertical-align: baseline;
+            width: 180px;
+        }
+        .info p
+        {
+            margin-top: 1px;
+        }
+
+        form, input
+        {
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
+        .buttons
+        {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+<header>
+    <img alt="Grave Investments" src="pics/logo.png">
+</header>
+
+<!-- NEW NAVIGATION BAR
+      http://cssmenumaker.com/menu/animated-responsive-drop-down-menu
+      -->
+<div style="z-index: 10" id='cssmenu'>
+    <ul>
+        <li><a href='index.html'><span>Home</span></a></li>
+        <li><a href='#'><span>Shop</span></a>
+            <ul>
+                <li class='has-sub'><a href='caskets.html'><span>Caskets</span></a></li>
+                <li class='has-sub'><a href='urns.html'><span>Urns</span></a></li>
+                <li class='has-sub'><a href='flower.html'><span>Flowers</span></a></li>
+            </ul>
+        </li>
+        <li><a href='schedule.html'><span>Schedule</span></a></li>
+        <li class='last active'><a href="sign_in.html"><span>Sign In</span></a></li>
+    </ul>
+</div>
+<!-- END OF NAVIGATION BAR -->
+
+<!-- The content for signing in: the title, the input fields, and a button! -->
+<div id="content">
+    <h2 style="text-align: center; margin-top: 10px">Welcome Back!</h2>
+    <form class="info">
+        <table align="center">
+            <tr>
+                <td> <p>Username <input type="text"> </p></td>
+            </tr>
+            <tr>
+                <td> <p>Password <input type="password"> </p></td>
+            </tr>
+        </table>
+    </form>
+    <table align="center" class="buttons">
+        <tr>
+            <td><button>Sign In</button> <a href="sign_up.html"><button>Create an Account</button></a></td>
+        </tr>
+    </table>
+</div>
+<div id="footer">
+    <p>Tyler Cantrell, Juan Chavez, Aiden Navarro, Taylor Spiller [2015]</p>
+</div>
+
+</body>
+
+</html>
