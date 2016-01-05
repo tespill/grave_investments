@@ -37,6 +37,8 @@ header{
     color: white;
     padding-bottom: 1px;
     min-width: 850px;
+    font-family: 'Times New Roman';
+    font-size: 12pt;
 }
 
 /* Creates circular images for shop page */
