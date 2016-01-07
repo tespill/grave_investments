@@ -32,16 +32,16 @@
                 -->
         <div style="z-index: 10" id='cssmenu'>
             <ul>
-                <li><a href='index.html'><span>Home</span></a></li>
+                <li><a href='index.php'><span>Home</span></a></li>
                 <li><a href='#'><span>Shop</span></a>
                     <ul>
-                        <li class='has-sub'><a href='caskets.html'><span>Caskets</span></a></li>
+                        <li class='has-sub'><a href='caskets.php'><span>Caskets</span></a></li>
                         <li class='has-sub'><a href='urns.html'><span>Urns</span></a></li>
-                        <li class='has-sub'><a href='flower.html'><span>Flowers</span></a></li>
+                        <li class='has-sub'><a href='flower.php'><span>Flowers</span></a></li>
                     </ul>
                 </li>
-                <li><a href='schedule.html'><span>Schedule</span></a></li>
-                <li class='last active'><a href="sign_in.html"><span>Sign In</span></a></li>
+                <li><a href='schedule.php'><span>Schedule</span></a></li>
+                <li class='last active'><a href="sign_in.php"><span>Sign In</span></a></li>
             </ul>
         </div>
         <!-- END OF NAVIGATION BAR -->
@@ -88,7 +88,7 @@
                                 <button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
                             </div>
                             <div class="etc-login-form">
-                                <p>already have an account? <a href="sign_in.html">login here</a></p>
+                                <p>already have an account? <a href="sign_in.php">login here</a></p>
                             </div>
                         </form>
                     </div>
