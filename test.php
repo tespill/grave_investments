@@ -1,23 +1,19 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "root";
-$dbname = "Grave Investments";
+/*** mysql hostname ***/
+$hostname = 'localhost';
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+/*** mysql username ***/
+$username = 'root';
+
+/*** mysql password ***/
+$password = 'root';
+
+try {
+    $dbh = new PDO("mysql:host=$hostname;dbname=Grave_Investments", $username, $password);
+    /*** echo a message saying we have connected ***/
+    echo 'Connected to database';
 }
-
-$sql = "INSERT INTO MyGuests (id, username, password, email,fullName)
-VALUES ('1','John', 'Doe', 'john@example.com','you mo')";
-
-if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+catch(PDOException $e)
+{
+    echo $e->getMessage();
 }
-
-$conn->close();

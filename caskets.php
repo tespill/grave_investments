@@ -31,7 +31,7 @@
                 <li class='active has-sub'><a href='#'><span>Shop</span></a>
                     <ul>
                         <li class='has-sub'><a href='caskets.php'><span>Caskets</span></a></li>
-                        <li class='has-sub'><a href='urns.html'><span>Urns</span></a></li>
+                        <li class='has-sub'><a href='urns.php'><span>Urns</span></a></li>
                         <li class='has-sub'><a href='flower.php'><span>Flowers</span></a></li>
                     </ul>
                 </li>
