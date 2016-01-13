@@ -1,3 +1,46 @@
+<?php
+require_once('connect.php');
+$error = false;
+$success = false;
+
+if(@$_POST['addUser']){
+    /**
+     * New user was submitted. Make sure name and email are present!
+     */
+    if(!$_POST['email']){
+        $error .= '<p>Email is a required field!</p>';
+    }
+
+    if(!$_POST['name']){
+        $error .= '<p>Name is a required field!</p>';
+    }
+
+    /**
+     * If we're here...all is well. Process the insert
+     */
+    $stmt = $dbh->prepare('INSERT INTO users (name, email) VALUES (:name, :email)');
+    $result = $stmt->execute(
+        array(
+            'name'=>$_POST['name'],
+            'email'=>$_POST['email']
+        )
+    );
+
+    if($result){
+        $success = "User " . $_POST['email'] . " was successfully saved.";
+    }else{
+        $success = "There was an error saving " . $_POST['email'];
+    }
+}
+
+/**
+ * We'll always want to pull the users to show them in the table
+ */
+$stmt = $dbh->prepare('SELECT * FROM users');
+$stmt->execute();
+$users = $stmt->fetchAll();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -54,30 +97,30 @@
                     <div class="logo">Register</div>
                     <!-- Main Form -->
                     <div class="login-form-1">
-                        <form id="register-form" class="text-left">
+                        <form id="register-form" class="text-left" action="insert.php" method="post">
                             <div class="login-form-main-message"></div>
                             <div class="main-login-form">
                                 <div class="login-group">
                                     <div class="form-group">
                                         <label for="reg_username" class="sr-only">Email address</label>
-                                        <input type="text" class="form-control" id="reg_username" name="reg_username" placeholder="username">
+                                        <input type="text" class="form-control" id="reg_username" name="username" placeholder="username">
                                     </div>
                                     <div class="form-group">
                                         <label for="reg_password" class="sr-only">Password</label>
-                                        <input type="password" class="form-control" id="reg_password" name="reg_password" placeholder="password">
+                                        <input type="password" class="form-control" id="reg_password" name="password" placeholder="password">
                                     </div>
                                     <div class="form-group">
                                         <label for="reg_password_confirm" class="sr-only">Password Confirm</label>
-                                        <input type="password" class="form-control" id="reg_password_confirm" name="reg_password_confirm" placeholder="confirm password">
+                                        <input type="password" class="form-control" id="reg_password_confirm" name="password_confirm" placeholder="confirm password">
                                     </div>
 
                                     <div class="form-group">
                                         <label for="reg_email" class="sr-only">Email</label>
-                                        <input type="text" class="form-control" id="reg_email" name="reg_email" placeholder="email">
+                                        <input type="text" class="form-control" id="reg_email" name="email" placeholder="email">
                                     </div>
                                     <div class="form-group">
                                         <label for="reg_fullname" class="sr-only">Full Name</label>
-                                        <input type="text" class="form-control" id="reg_fullname" name="reg_fullname" placeholder="full name">
+                                        <input type="text" class="form-control" id="reg_fullname" name="fullname" placeholder="full name">
                                     </div>
 
                                     <div class="form-group login-group-checkbox">
@@ -104,3 +147,4 @@
         <script rel="script" type="text/javascript" src="js/registration.js"></script>
     </body>
 </html>
+
