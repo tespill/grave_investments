@@ -13,6 +13,11 @@ if(@$_POST['addUser']){
         $error .= '<p>Date is a required field!</p>';
     }
 
+    if(!$_POST['time'])
+    {
+        $error .= '<p>Time is a required field!</p>';
+    }
+
     if(!$_POST['firstName'])
     {
         $error .= '<p>First name is a required field!</p>';
@@ -28,32 +33,37 @@ if(@$_POST['addUser']){
         $error .= '<p>Burial/cremation is a required field!</p>';
     }
 
-    /**
-     * If we're here...all is well. Process the insert
-     */
-    $stmt = $dbh->prepare('INSERT INTO Schedule (date, firstName, lastName, religion, contactInfo, burial, music, specific_requests, gender) VALUES (:date, :firstName, :lastName, :religion, :contactInfo, :burial, :music, :specific_requests, :gender)');
-    $result = $stmt->execute(
-        array(
-            'date'=>$_POST['date'],
-            'firstName'=>$_POST['firstName'],
-            'lastName'=>$_POST['lastName'],
-            'religion'=>$_POST['religion'],
-            'contactInfo'=>$_POST['contactInfo'],
-            'burial'=>$_POST['burial'],
-            'music'=>$_POST['music'],
-            'specific_requests'=>$_POST['specific_requests'],
-            'gender'=>$_POST['gender']
-        )
-    );
+    if($_POST['burial'] && $_POST['lastName'] && $_POST['firstName'] && $_POST['date'])
+    {
+        /**
+         * If we're here...all is well. Process the insert
+         */
+        $stmt = $dbh->prepare('INSERT INTO Schedule (date, time, firstName, lastName, religion, contactInfo, burial, music, specific_requests, gender) VALUES (:date, :time, :firstName, :lastName, :religion, :contactInfo, :burial, :music, :specific_requests, :gender)');
+        $result = $stmt->execute(
+            array(
+                'date'=>$_POST['date'],
+                'time'=>$_POST['time'],
+                'firstName'=>$_POST['firstName'],
+                'lastName'=>$_POST['lastName'],
+                'religion'=>$_POST['religion'],
+                'contactInfo'=>$_POST['contactInfo'],
+                'burial'=>$_POST['burial'],
+                'music'=>$_POST['music'],
+                'specific_requests'=>$_POST['specific_requests'],
+                'gender'=>$_POST['gender']
+            )
+        );
 
-    if($result)
-    {
-        $success = "User " . $_POST['firstName'] . " was successfully saved.";
+        if($result)
+        {
+            $success = "User " . $_POST['firstName'] . " was successfully saved.";
+        }
+        else
+        {
+            $success = "There was an error saving " . $_POST['firstName'];
+        }
     }
-    else
-    {
-        $success = "There was an error saving " . $_POST['email'];
-    }
+
 }
 
 /**
@@ -68,6 +78,16 @@ $users = $stmt->fetchAll();
 <!DOCTYPE html>
 <html lang="en">
     <head>
+
+        <style>
+            table
+            {
+                table-layout: fixed;
+                width: 1150px;
+                border-collapse: collapse;
+                border-spacing: 0;
+            }
+        </style>
         <meta charset="UTF-8">
         <title>Grave Investments</title>
         <script src="jquery-2.1.4.min.js"></script>
@@ -114,6 +134,44 @@ $users = $stmt->fetchAll();
         <!-- END OF NAVIGATION BAR -->
 
         <div id="content">
+            <br>
+            <center>
+                <form name="addUser" method = "post">
+                    Date:<br>
+                    <input type="date" name="date">
+                    <br>
+                    Time:<br>
+                    <input type="time" name="time">
+                    <br>
+                    First name:<br>
+                    <input type="text" name="firstName">
+                    <br>
+                    Last name:<br>
+                    <input type="text" name="lastName">
+                    <br>
+                    Religion:<br>
+                    <input type="text" name="religion">
+                    <br>
+                    Contact Info of Church:<br>
+                    <input type="text" name="contactInfo">
+                    <br>
+                    Burial/Cremation:<br>
+                    <input type="text" name="burial">
+                    <br>
+                    Music/Hymns:<br>
+                    <input type="text" name="music">
+                    <br>
+                    Specific Requests:<br>
+                    <input type="text" name="specific_requests">
+                    <br>
+                    Gender:<br>
+                    <input type="text" name="gender">
+                    <br>
+                    <br>
+                    <button type="submit" name="addUser" value="1"> Submit </button>
+                </form><br>
+            </center>
+
             <div class="error">
                 <?php
                 if($error){
@@ -133,56 +191,22 @@ $users = $stmt->fetchAll();
                 ?>
             </div>
 
-            <br>
-            <center>
-                <form name="addUser" method = "post">
-                    Date:<br>
-                    <input type="date" name="date">
-                    <br>
-                    First name:<br>
-                    <input type="text" name="firstName">
-                    <br>
-                    Last name:<br>
-                    <input type="text" name="lastName">
-                    <br>
-                    Religion:<br>
-                    <input type="text" name="religion">
-                    <br>
-                    Contact Info of Church:<br>
-                    <input type="text" name="contactInfo">
-                    <br>
-                    Burial<br>
-                    <input type="text" name="burial">
-                    <br>
-                    Music/Hymns:<br>
-                    <input type="text" name="music">
-                    <br>
-                    Specific Requests<br>
-                    <input type="text" name="specific_requests">
-                    <br>
-                    Gender:<br>
-                    <input type="text" name="gender">
-                    <br>
-                    <br>
-                    <button type="submit" name="addUser" value="1"> Submit </button>
-                </form><br>
-            </center>
-
             <?php
             if($users && count($users)){
                 ?>
-                <table>
+                <table align="center">
                     <thead>
                     <tr>
                         <th>Date</th>
+                        <td>Time</td>
                         <th>First Name</th>
                         <th>Last Name</th>
                         <th>Religion</th>
                         <th>Contact Info</th>
                         <th>Burial</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Name</th>
+                        <th>Music</th>
+                        <th>Specific Requests</th>
+                        <th>Gender</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -191,6 +215,7 @@ $users = $stmt->fetchAll();
                         ?>
                         <tr>
                             <td><?php echo $user['date']?></td>
+                            <td><?php echo $user['time']?></td>
                             <td><?php echo $user['firstName']?></td>
                             <td><?php echo $user['lastName']?></td>
                             <td><?php echo $user['religion']?></td>

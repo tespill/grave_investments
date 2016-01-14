@@ -11,9 +11,6 @@ $password = 'root';
 try
 {
     $dbh = new PDO("mysql:host=$hostname;dbname=Grave_Investments", $username, $password);
-    /*** echo a message saying we have connected ***/
-    echo 'Connected to database';
-
 }
 catch(PDOException $e)
 {
