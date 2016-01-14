@@ -15,14 +15,25 @@ if(@$_POST['addUser']){
         $error .= '<p>Name is a required field!</p>';
     }
 
+    if(!$_POST['password']){
+        $error .= '<p>Password is a required field!</p>';
+    }
+
+    if(!$_POST['username']){
+        $error .= '<p>Username is a required field!</p>';
+    }
+
+    if($_POST[] && )
     /**
      * If we're here...all is well. Process the insert
      */
-    $stmt = $dbh->prepare('INSERT INTO users (name, email) VALUES (:name, :email)');
+    $stmt = $dbh->prepare('INSERT INTO users (username, password, email, name) VALUES (:username, :password, :email, :name:)');
     $result = $stmt->execute(
         array(
             'name'=>$_POST['name'],
-            'email'=>$_POST['email']
+            'email'=>$_POST['email'],
+            'username'=>$_POST['username'],
+            'password'=>$_POST['password']
         )
     );
 
@@ -92,12 +103,32 @@ $users = $stmt->fetchAll();
         <!-- All of the information the new user will have to fill out. A table to organize the input fields -->
         <div id="content">
             <div class="container">
+                <!-- Error Messages -->
+                <div class="error">
+                    <?php
+                    if($error){
+                        echo $error;
+                        echo '<br /><br />';
+                    }
+                    ?>
+                </div>
+                ​
+                <div class="success">
+                    <?php
+                    if($success){
+                        echo $success;
+                        echo '<br /><br />';
+                    }
+                    ?>
+                </div>
+                <!-- End of Error Messages -->
+
                 <!-- REGISTRATION FORM -->
                 <div class="text-center" style="padding:50px 0">
                     <div class="logo">Register</div>
                     <!-- Main Form -->
                     <div class="login-form-1">
-                        <form id="register-form" class="text-left" action="insert.php" method="post">
+                        <form id="register-form" class="text-left" method="post">
                             <div class="login-form-main-message"></div>
                             <div class="main-login-form">
                                 <div class="login-group">
@@ -120,7 +151,7 @@ $users = $stmt->fetchAll();
                                     </div>
                                     <div class="form-group">
                                         <label for="reg_fullname" class="sr-only">Full Name</label>
-                                        <input type="text" class="form-control" id="reg_fullname" name="fullname" placeholder="full name">
+                                        <input type="text" class="form-control" id="reg_fullname" name="name" placeholder="name">
                                     </div>
 
                                     <div class="form-group login-group-checkbox">
@@ -135,8 +166,41 @@ $users = $stmt->fetchAll();
                             </div>
                         </form>
                     </div>
-                    <!-- end:Main Form -->
                 </div>
+                <!-- end:Main Form -->
+
+                <?php
+                if($users && count($users)){
+                    ?>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Username</th>
+                            <th>Password</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php
+                        foreach($users as $user){
+                            ?>
+                            <tr>
+                                <td><?php echo $user['name']?></td>
+                                <td><?php echo $user['email']?></td>
+                                <td><?php echo $user['username']?></td>
+                                <td><?php echo $user['password']?></td>
+                            </tr>
+                            <?php
+                        }
+                        ?>
+                        </tbody>
+                    </table>
+                    <?php
+                }else{
+                    echo "There are no users in this system.";
+                }
+                ?>
 
             </div>
         </div>
