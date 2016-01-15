@@ -12,10 +12,14 @@ if(@$_POST['addUser']){
         $error .= '<p>Please enter all fields.</p>';
     }
 
+    if($_POST['password'] != $_POST['password_confirm']){
+        $error .= '<p>Your passwords do not match.</p>';
+    }
+
     /**
      * If we're here...all is well. Process the insert
      */
-    if($_POST['name'] && $_POST['email'] && $_POST['password'] && $_POST['username']) {
+    if($_POST['name'] && $_POST['email'] && $_POST['password'] && $_POST['username'] && $_POST['password'] == $_POST['password_confirm']) {
 
         $stmt = $dbh->prepare('INSERT INTO users (name, email, password, username) VALUES (:name, :email, :password, :username)');
         $result = $stmt->execute(
