@@ -27,16 +27,16 @@
                 -->
         <div style="z-index: 10" id='cssmenu'>
             <ul>
-                <li><a href='index.html'><span>Home</span></a></li>
+                <li><a href='index.php'><span>Home</span></a></li>
                 <li class="active has-sub"><a href='#'><span>Shop</span></a>
                     <ul>
-                        <li class='has-sub'><a href='caskets.html'><span>Caskets</span></a></li>
-                        <li class='has-sub'><a href='urns.html'><span>Urns</span></a></li>
-                        <li class='has-sub'><a href='flower.html'><span>Flowers</span></a></li>
+                        <li class='has-sub'><a href='caskets.php'><span>Caskets</span></a></li>
+                        <li class='has-sub'><a href='urns.php'><span>Urns</span></a></li>
+                        <li class='has-sub'><a href='flower.php'><span>Flowers</span></a></li>
                     </ul>
                 </li>
-                <li><a href='schedule.html'><span>Schedule</span></a></li>
-                <li class='last'><a href="sign_in.html"><span>Sign In</span></a></li>
+                <li><a href='schedule.php'><span>Schedule</span></a></li>
+                <li class='last'><a href="sign_in.php"><span>Sign In</span></a></li>
             </ul>
         </div>
         <!-- END OF NAVIGATION BAR -->

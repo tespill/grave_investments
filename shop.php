@@ -12,11 +12,11 @@
 </header>
 <div id="nav">
     <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a class="active" href="shop.html">Shop</a></li>
-        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="index.php">Home</a></li>
+        <li><a class="active" href="shop.php">Shop</a></li>
+        <li><a href="schedule.php">Schedule</a></li>
         <ul style="float:right;list-style-type:none;">
-            <li><a href="sign_up.html">Sign-in</a></li>
+            <li><a href="sign_up.php">Sign-in</a></li>
         </ul>
     </ul>
 </div>
