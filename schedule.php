@@ -1,5 +1,5 @@
 <?php
-require_once('test.php');
+require_once('connection.php');
 $error = false;
 $success = false;
 
@@ -86,6 +86,7 @@ $users = $stmt->fetchAll();
                 width: 1150px;
                 border-collapse: collapse;
                 border-spacing: 0;
+                background-color: white;
             }
         </style>
         <meta charset="UTF-8">
@@ -134,43 +135,68 @@ $users = $stmt->fetchAll();
         <!-- END OF NAVIGATION BAR -->
 
         <div id="content">
-            <br>
-            <center>
-                <form name="addUser" method = "post">
-                    Date:<br>
-                    <input type="date" name="date">
-                    <br>
-                    Time:<br>
-                    <input type="time" name="time">
-                    <br>
-                    First name:<br>
-                    <input type="text" name="firstName">
-                    <br>
-                    Last name:<br>
-                    <input type="text" name="lastName">
-                    <br>
-                    Religion:<br>
-                    <input type="text" name="religion">
-                    <br>
-                    Contact Info of Church:<br>
-                    <input type="text" name="contactInfo">
-                    <br>
-                    Burial/Cremation:<br>
-                    <input type="text" name="burial">
-                    <br>
-                    Music/Hymns:<br>
-                    <input type="text" name="music">
-                    <br>
-                    Specific Requests:<br>
-                    <input type="text" name="specific_requests">
-                    <br>
-                    Gender:<br>
-                    <input type="text" name="gender">
-                    <br>
-                    <br>
-                    <button type="submit" name="addUser" value="1"> Submit </button>
-                </form><br>
-            </center>
+            <div class="text-center" style="padding:50px 0">
+                <div class="logo">Die</div>
+
+            <div class="login-form-1" style="width: 100%;">
+                <form name="addUser" method = "post" id="login-form" class="text-left">
+                    <div class="login-form-main-message"></div>
+                    <div class="main-login-form">
+                        <div class="login-group">
+                            <div class="form-group">
+                                <label for="lg_username" class="sr-only">Date</label>
+                                <input type="date" class="form-control" name="date" placeholder="Date">
+                            </div>
+                            <div class="form-group">
+                                <label for="lg_password" class="sr-only">Time</label>
+                                <input type="time" class="form-control" name="time" placeholder="Time">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lg_password" class="sr-only">First Name</label>
+                                <input type="text" class="form-control" name="firstName" placeholder="*First Name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lg_password" class="sr-only">Last Name</label>
+                                <input type="text" class="form-control" name="lastName" placeholder="*Last Name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lg_password" class="sr-only">Religion</label>
+                                <input type="text" class="form-control" name="religion" placeholder="Religion">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lg_password" class="sr-only">Contact Info</label>
+                                <input type="text" class="form-control" name="contactInfo" placeholder="Contact Info">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lg_password" class="sr-only">Burial/Cremation</label>
+                                <input type="text" class="form-control" name="burial" placeholder="*Burial/Cremation">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lg_password" class="sr-only">Music</label>
+                                <input type="text" class="form-control" name="music" placeholder="Music">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lg_password" class="sr-only">Specific Requests</label>
+                                <input type="text" class="form-control" name="specific_requests" placeholder="Specific Requests">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lg_password" class="sr-only">Gender</label>
+                                <input type="text" class="form-control" name="gender" placeholder="Gender">
+                            </div>
+                        </div>
+                        <button type="submit" name="addUser" value="1" class="login-button" id="test"><i class="fa fa-chevron-right"></i></button>
+                    </div>
+                </form>
+            </div>
+            </div>
 
             <div class="error">
                 <?php
