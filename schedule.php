@@ -1,5 +1,5 @@
 <?php
-require_once('connection.php');
+require_once('connect.php');
 $error = false;
 $success = false;
 

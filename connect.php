@@ -10,7 +10,7 @@ $password = 'root';
 
 try
 {
-    $dbh = new PDO("mysql:host=$hostname;dbname=Grave_Investments", $username, $password);
+    $dbh = new PDO("mysql:host=$hostname;dbname=grave_investments", $username, $password);
 }
 catch(PDOException $e)
 {
