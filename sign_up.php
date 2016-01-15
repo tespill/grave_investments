@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
 require_once('connect.php');
 $error = false;
@@ -7,52 +8,35 @@ if(@$_POST['addUser']){
     /**
      * New user was submitted. Make sure name and email are present!
      */
-    if(!$_POST['email']){
-        $error .= '<p>Email is a required field!</p>';
+    if(!$_POST['email'] || !$_POST['username'] || !$_POST['name'] || !$_POST['password']){
+        $error .= '<p>Please enter all fields.</p>';
     }
 
-    if(!$_POST['name']){
-        $error .= '<p>Name is a required field!</p>';
-    }
-
-    if(!$_POST['password']){
-        $error .= '<p>Password is a required field!</p>';
-    }
-
-    if(!$_POST['username']){
-        $error .= '<p>Username is a required field!</p>';
-    }
-
-    if($_POST[] && )
     /**
      * If we're here...all is well. Process the insert
      */
-    $stmt = $dbh->prepare('INSERT INTO users (username, password, email, name) VALUES (:username, :password, :email, :name:)');
-    $result = $stmt->execute(
-        array(
-            'name'=>$_POST['name'],
-            'email'=>$_POST['email'],
-            'username'=>$_POST['username'],
-            'password'=>$_POST['password']
-        )
-    );
+    if($_POST['name'] && $_POST['email'] && $_POST['password'] && $_POST['username']) {
 
-    if($result){
-        $success = "User " . $_POST['email'] . " was successfully saved.";
-    }else{
-        $success = "There was an error saving " . $_POST['email'];
+        $stmt = $dbh->prepare('INSERT INTO users (name, email, password, username) VALUES (:name, :email, :password, :username)');
+        $result = $stmt->execute(
+            array(
+                'name' => $_POST['name'],
+                'email' => $_POST['email'],
+                'password' => $_POST['password'],
+                'username' => $_POST['username']
+            )
+        );
+
+
+        if ($result) {
+            $success = "User " . $_POST['email'] . " was successfully saved.";
+        } else {
+            $success = "There was an error saving " . $_POST['email'];
+        }
     }
 }
-
-/**
- * We'll always want to pull the users to show them in the table
- */
-$stmt = $dbh->prepare('SELECT * FROM users');
-$stmt->execute();
-$users = $stmt->fetchAll();
 ?>
 
-<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -103,55 +87,36 @@ $users = $stmt->fetchAll();
         <!-- All of the information the new user will have to fill out. A table to organize the input fields -->
         <div id="content">
             <div class="container">
-                <!-- Error Messages -->
-                <div class="error">
-                    <?php
-                    if($error){
-                        echo $error;
-                        echo '<br /><br />';
-                    }
-                    ?>
-                </div>
-                ​
-                <div class="success">
-                    <?php
-                    if($success){
-                        echo $success;
-                        echo '<br /><br />';
-                    }
-                    ?>
-                </div>
-                <!-- End of Error Messages -->
 
                 <!-- REGISTRATION FORM -->
                 <div class="text-center" style="padding:50px 0">
                     <div class="logo">Register</div>
                     <!-- Main Form -->
                     <div class="login-form-1">
-                        <form id="register-form" class="text-left" method="post">
+                        <form id="register-form" class="text-left" name="addUser" method="post">
                             <div class="login-form-main-message"></div>
                             <div class="main-login-form">
                                 <div class="login-group">
                                     <div class="form-group">
                                         <label for="reg_username" class="sr-only">Email address</label>
-                                        <input type="text" class="form-control" id="reg_username" name="username" placeholder="username">
+                                        <input type="text" class="form-control" name="username" placeholder="username">
                                     </div>
                                     <div class="form-group">
                                         <label for="reg_password" class="sr-only">Password</label>
-                                        <input type="password" class="form-control" id="reg_password" name="password" placeholder="password">
+                                        <input type="password" class="form-control" name="password" placeholder="password">
                                     </div>
                                     <div class="form-group">
                                         <label for="reg_password_confirm" class="sr-only">Password Confirm</label>
-                                        <input type="password" class="form-control" id="reg_password_confirm" name="password_confirm" placeholder="confirm password">
+                                        <input type="password" class="form-control" name="password_confirm" placeholder="confirm password">
                                     </div>
 
                                     <div class="form-group">
                                         <label for="reg_email" class="sr-only">Email</label>
-                                        <input type="text" class="form-control" id="reg_email" name="email" placeholder="email">
+                                        <input type="text" class="form-control" name="email" placeholder="email">
                                     </div>
                                     <div class="form-group">
                                         <label for="reg_fullname" class="sr-only">Full Name</label>
-                                        <input type="text" class="form-control" id="reg_fullname" name="name" placeholder="name">
+                                        <input type="text" class="form-control" name="name" placeholder="name">
                                     </div>
 
                                     <div class="form-group login-group-checkbox">
@@ -159,7 +124,7 @@ $users = $stmt->fetchAll();
                                         <label for="reg_agree">i agree with <a href="#">terms</a></label>
                                     </div>
                                 </div>
-                                <button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
+                                <button type="submit" class="login-button" name="addUser" value="1"><i class="fa fa-chevron-right"></i></button>
                             </div>
                             <div class="etc-login-form">
                                 <p>already have an account? <a href="sign_in.html">login here</a></p>
@@ -169,39 +134,23 @@ $users = $stmt->fetchAll();
                 </div>
                 <!-- end:Main Form -->
 
-                <?php
-                if($users && count($users)){
-                    ?>
-                    <table>
-                        <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Username</th>
-                            <th>Password</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <?php
-                        foreach($users as $user){
-                            ?>
-                            <tr>
-                                <td><?php echo $user['name']?></td>
-                                <td><?php echo $user['email']?></td>
-                                <td><?php echo $user['username']?></td>
-                                <td><?php echo $user['password']?></td>
-                            </tr>
-                            <?php
-                        }
-                        ?>
-                        </tbody>
-                    </table>
+                <div align="center" class="error">
                     <?php
-                }else{
-                    echo "There are no users in this system.";
-                }
-                ?>
-
+                    if($error){
+                        echo $error;
+                        echo '<br /><br />';
+                    }
+                    ?>
+                </div>
+                ​
+                <div align="center" class="success">
+                    <?php
+                    if($success){
+                        echo $success;
+                        echo '<br /><br />';
+                    }
+                    ?>
+                </div>
             </div>
         </div>
 
