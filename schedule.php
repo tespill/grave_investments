@@ -78,15 +78,32 @@ $users = $stmt->fetchAll();
 <!DOCTYPE html>
 <html lang="en">
     <head>
-
         <style>
-            table
-            {
-                table-layout: fixed;
-                width: 1150px;
-                border-collapse: collapse;
-                border-spacing: 0;
+            table{
                 background-color: white;
+                border-radius: 10px;
+                margin-left: auto;
+                margin-right: auto;
+                border-color:transparent;
+                border-collapse: collapse;
+                max-width: 80%;
+                color: darkgray;
+                padding:10px;
+            }
+
+            tr{ border-bottom: dotted lightgray 2px;}
+
+            td{
+                padding: 10px;
+                word-wrap: break-word;
+            }
+
+            thead{
+                font-weight: bold;
+            }
+
+            #content{
+                text-align: center;
             }
         </style>
         <meta charset="UTF-8">
@@ -136,69 +153,69 @@ $users = $stmt->fetchAll();
 
         <div id="content">
             <div class="text-center" style="padding:50px 0">
-                <div class="logo">Die</div>
+                <div class="logo">Plan a Funeral</div>
 
-            <div class="login-form-1" style="width: 100%;">
-                <form name="addUser" method = "post" id="login-form" class="text-left">
-                    <div class="login-form-main-message"></div>
-                    <div class="main-login-form">
-                        <div class="login-group">
-                            <div class="form-group">
-                                <label for="lg_username" class="sr-only">Date</label>
-                                <input type="date" class="form-control" name="date" placeholder="Date">
-                            </div>
-                            <div class="form-group">
-                                <label for="lg_password" class="sr-only">Time</label>
-                                <input type="time" class="form-control" name="time" placeholder="Time">
-                            </div>
+                <div class="login-form-1" style="width: 100%;">
+                    <form name="addUser" method = "post" id="login-form" class="text-left">
+                        <div class="login-form-main-message"></div>
+                        <div class="main-login-form">
+                            <div class="login-group">
+                                <div class="form-group">
+                                    <label for="lg_username" class="sr-only">Date</label>
+                                    <input type="date" class="form-control" name="date" placeholder="Date">
+                                </div>
+                                <div class="form-group">
+                                    <label for="lg_password" class="sr-only">Time</label>
+                                    <input type="time" class="form-control" name="time" placeholder="Time">
+                                </div>
 
-                            <div class="form-group">
-                                <label for="lg_password" class="sr-only">First Name</label>
-                                <input type="text" class="form-control" name="firstName" placeholder="*First Name">
-                            </div>
+                                <div class="form-group">
+                                    <label for="lg_password" class="sr-only">First Name</label>
+                                    <input type="text" class="form-control" name="firstName" placeholder="*First Name">
+                                </div>
 
-                            <div class="form-group">
-                                <label for="lg_password" class="sr-only">Last Name</label>
-                                <input type="text" class="form-control" name="lastName" placeholder="*Last Name">
-                            </div>
+                                <div class="form-group">
+                                    <label for="lg_password" class="sr-only">Last Name</label>
+                                    <input type="text" class="form-control" name="lastName" placeholder="*Last Name">
+                                </div>
 
-                            <div class="form-group">
-                                <label for="lg_password" class="sr-only">Religion</label>
-                                <input type="text" class="form-control" name="religion" placeholder="Religion">
-                            </div>
+                                <div class="form-group">
+                                    <label for="lg_password" class="sr-only">Religion</label>
+                                    <input type="text" class="form-control" name="religion" placeholder="Religion">
+                                </div>
 
-                            <div class="form-group">
-                                <label for="lg_password" class="sr-only">Contact Info</label>
-                                <input type="text" class="form-control" name="contactInfo" placeholder="Contact Info">
-                            </div>
+                                <div class="form-group">
+                                    <label for="lg_password" class="sr-only">Contact Info</label>
+                                    <input type="text" class="form-control" name="contactInfo" placeholder="Contact Info">
+                                </div>
 
-                            <div class="form-group">
-                                <label for="lg_password" class="sr-only">Burial/Cremation</label>
-                                <input type="text" class="form-control" name="burial" placeholder="*Burial/Cremation">
-                            </div>
+                                <div class="form-group">
+                                    <label for="lg_password" class="sr-only">Burial/Cremation</label>
+                                    <input type="text" class="form-control" name="burial" placeholder="*Burial/Cremation">
+                                </div>
 
-                            <div class="form-group">
-                                <label for="lg_password" class="sr-only">Music</label>
-                                <input type="text" class="form-control" name="music" placeholder="Music">
-                            </div>
+                                <div class="form-group">
+                                    <label for="lg_password" class="sr-only">Music</label>
+                                    <input type="text" class="form-control" name="music" placeholder="Music">
+                                </div>
 
-                            <div class="form-group">
-                                <label for="lg_password" class="sr-only">Specific Requests</label>
-                                <input type="text" class="form-control" name="specific_requests" placeholder="Specific Requests">
-                            </div>
+                                <div class="form-group">
+                                    <label for="lg_password" class="sr-only">Specific Requests</label>
+                                    <input type="text" class="form-control" name="specific_requests" placeholder="Specific Requests">
+                                </div>
 
-                            <div class="form-group">
-                                <label for="lg_password" class="sr-only">Gender</label>
-                                <input type="text" class="form-control" name="gender" placeholder="Gender">
+                                <div class="form-group">
+                                    <label for="lg_password" class="sr-only">Gender</label>
+                                    <input type="text" class="form-control" name="gender" placeholder="Gender">
+                                </div>
                             </div>
+                            <button type="submit" name="addUser" value="1" class="login-button" id="test"><i class="fa fa-chevron-right"></i></button>
                         </div>
-                        <button type="submit" name="addUser" value="1" class="login-button" id="test"><i class="fa fa-chevron-right"></i></button>
-                    </div>
-                </form>
-            </div>
+                    </form>
+                </div>
             </div>
 
-            <div class="error">
+            <div align="center" class="error">
                 <?php
                 if($error){
                     echo $error;
@@ -208,7 +225,7 @@ $users = $stmt->fetchAll();
             </div>
 
 
-            <div class="success">
+            <div align="center" class="success">
                 <?php
                 if($success){
                     echo $success;
@@ -220,11 +237,19 @@ $users = $stmt->fetchAll();
             <?php
             if($users && count($users)){
                 ?>
-                <table align="center">
+                <table align="center"
+                       style="
+                        background-color: white;
+                        border-radius: 10px;
+                        margin-left: auto;
+                        margin-right: auto;
+                        border-color: transparent;
+                        border-collapse: collapse;
+                        text-align: center;
+                        ">
                     <thead>
-                    <tr>
                         <th>Date</th>
-                        <td>Time</td>
+                        <th>Time</th>
                         <th>First Name</th>
                         <th>Last Name</th>
                         <th>Religion</th>
@@ -233,7 +258,6 @@ $users = $stmt->fetchAll();
                         <th>Music</th>
                         <th>Specific Requests</th>
                         <th>Gender</th>
-                    </tr>
                     </thead>
                     <tbody>
                     <?php
@@ -256,9 +280,11 @@ $users = $stmt->fetchAll();
                     ?>
                     </tbody>
                 </table>
+                <br/> <br/>
                 <?php
             }else{
-                echo "There are no users in this system.";
+                echo "There are no funerals scheduled soon.";
+                echo "<br /> <br />";
             }
             ?>
 
