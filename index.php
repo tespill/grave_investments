@@ -9,9 +9,7 @@
         <!-- Scripts for slider -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script src="js/responsiveslides.min.js"></script>
-        <?php
-            mysql_close($test);
-            ?>
+        
         <!-- Files for menu bar -->
         <script src="js/navbar.js" type="text/javascript"></script>
         <link rel="stylesheet" type="text/css" href="css/navbar.css"/>
